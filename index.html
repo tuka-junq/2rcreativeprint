@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2R Creative Print — Confecção e estamparia personalizada em São Paulo</title>
+  <meta name="description"
+    content="Confecção personalizada com qualidade de marca, escala de fábrica e atendimento de parceiro. Da peça unitária a 3.000 peças/dia. Silk, DTF, transfer e bordado em São Paulo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;900&family=Archivo+Expanded:wght@800;900&family=Inter:wght@400;500;600&family=Anton&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --verde2r: #017938;
+      --verdeProfundo: #015E1B;
+      --verdeFloresta: #053015;
+      --preto: #0B0B0B;
+      --branco: #FBFCFC;
+      --concreto: #6E7A72;
+      --cru: #F0EFE9;
+      --lima: #C6F24E;
+      --linha: #d9d8d0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cru);
+      color: var(--preto);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden
+    }
+
+    img,
+    video {
+      display: block;
+      max-width: 100%
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .display {
+      font-family: 'Archivo Expanded', 'Archivo', sans-serif;
+      font-weight: 900;
+      letter-spacing: -.01em;
+      line-height: .92;
+      text-transform: uppercase
+    }
+
+    .archivo {
+      font-family: 'Archivo', sans-serif
+    }
+
+    .eyebrow {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: 12px;
+      color: var(--verde2r);
+      display: inline-block
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 28px
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 999px
+    }
+
+    /* ---------- NAV ---------- */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      transition: .35s
+    }
+
+    header .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 28px;
+      max-width: 1180px;
+      margin: 0 auto
+    }
+
+    header.scrolled {
+      background: rgba(251, 252, 252, .86);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--linha)
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .nav-logo img {
+      height: 38px;
+      width: auto;
+      transition: .35s
+    }
+
+    .nav-mark {
+      height: 40px
+    }
+
+    #wordmark {
+      filter: brightness(0) invert(1);
+      transition: .35s
+    }
+
+    header.scrolled #wordmark {
+      filter: none
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px
+    }
+
+    .nav-links a {
+      font-family: 'Archivo';
+      font-weight: 600;
+      font-size: 13.5px;
+      letter-spacing: .02em;
+      color: var(--branco);
+      transition: .25s
+    }
+
+    header.scrolled .nav-links a {
+      color: var(--preto)
+    }
+
+    .nav-links a:hover {
+      color: var(--lima)
+    }
+
+    header.scrolled .nav-links a:hover {
+      color: var(--verde2r)
+    }
+
+    .nav-cta {
+      background: var(--lima);
+      color: var(--preto) !important;
+      padding: 11px 20px;
+      border-radius: 999px;
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: .25s
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(198, 242, 78, .4)
+    }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer
+    }
+
+    .burger span {
+      width: 26px;
+      height: 2px;
+      background: var(--branco)
+    }
+
+    header.scrolled .burger span {
+      background: var(--preto)
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: var(--verdeFloresta)
+    }
+
+    .hero video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0
+    }
+
+    .hero .veil {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(5, 48, 21, .55) 0%, rgba(5, 48, 21, .25) 38%, rgba(5, 48, 21, .78) 88%, rgba(5, 48, 21, .96) 100%);
+    }
+
+    .hero .ring {
+      position: absolute;
+      right: -160px;
+      top: -120px;
+      width: 420px;
+      height: 420px;
+      border: 54px solid var(--verde2r);
+      border-radius: 50%;
+      opacity: .30;
+      z-index: 1
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding-bottom: 54px
+    }
+
+    .hero .pill-tag {
+      background: var(--lima);
+      color: var(--preto);
+      margin-bottom: 24px
+    }
+
+    .hero h1 {
+      color: var(--branco);
+      font-size: clamp(22px, 4.2vw, 58px);
+      max-width: 15ch;
+      text-shadow: 0 2px 28px rgba(5, 48, 21, .55), 0 1px 4px rgba(0, 0, 0, .45)
+    }
+
+    .hero h1 .g {
+      color: var(--lima)
+    }
+
+    .hero p.sub {
+      color: #eef2ee;
+      font-size: clamp(12.8px, 1.36vw, 16.8px);
+      max-width: 600px;
+      margin-top: 24px;
+      text-shadow: 0 1px 14px rgba(5, 48, 21, .6), 0 1px 3px rgba(0, 0, 0, .5)
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px
+    }
+
+    .btn-primary {
+      background: var(--lima);
+      color: var(--preto);
+      padding: 15px 28px;
+      border-radius: 999px;
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 14.5px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: .25s
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(198, 242, 78, .4)
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--branco);
+      border: 1.5px solid rgba(255, 255, 255, .45);
+      padding: 15px 28px;
+      border-radius: 999px;
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 14.5px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: .25s
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--lima);
+      color: var(--lima)
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-top: 42px;
+      color: #c4ccc4;
+      font-size: 13px;
+      font-family: 'Archivo';
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase
+    }
+
+    .hero-meta span {
+      display: flex;
+      align-items: center;
+      gap: 9px
+    }
+
+    .hero-meta b {
+      color: var(--lima);
+      font-size: 20px;
+      font-family: 'Archivo Expanded', 'Archivo';
+      font-weight: 900
+    }
+
+    /* ---------- MARQUEE ---------- */
+    .marquee {
+      background: var(--preto);
+      color: var(--branco);
+      overflow: hidden;
+      border-top: 3px solid var(--lima)
+    }
+
+    .marquee .track {
+      display: flex;
+      gap: 0;
+      white-space: nowrap;
+      animation: scroll 32s linear infinite
+    }
+
+    .marquee .track div {
+      display: flex;
+      align-items: center;
+      gap: 46px;
+      padding: 16px 23px
+    }
+
+    .marquee span {
+      font-family: 'Archivo Expanded', 'Archivo';
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 18px;
+      letter-spacing: .02em
+    }
+
+    .marquee i {
+      color: var(--lima);
+      font-style: normal
+    }
+
+    @keyframes scroll {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ---------- SECTION SHELL ---------- */
+    section.block {
+      padding: 96px 0
+    }
+
+    .sec-head {
+      max-width: 760px;
+      margin-bottom: 52px
+    }
+
+    .sec-head h2 {
+      font-family: 'Archivo Expanded', 'Archivo';
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: clamp(24px, 3.52vw, 44.8px);
+      line-height: .96;
+      margin-top: 14px
+    }
+
+    .sec-head p {
+      color: var(--concreto);
+      font-size: 17px;
+      margin-top: 18px;
+      max-width: 620px
+    }
+
+    /* ---------- DIFERENCIAIS ---------- */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px
+    }
+
+    .dcard {
+      background: var(--branco);
+      border-radius: 20px;
+      padding: 30px 26px 34px;
+      border: 1px solid var(--linha);
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: .3s
+    }
+
+    .dcard:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(5, 48, 21, .10);
+      border-color: transparent
+    }
+
+    .dcard>div:last-child {
+      margin-top: 20px
+    }
+
+    .dnum {
+      font-family: 'Archivo Expanded', 'Archivo';
+      font-weight: 900;
+      font-size: 30px;
+      color: var(--lima);
+      -webkit-text-stroke: 1.5px var(--verde2r);
+    }
+
+    .dcard h3 {
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 8px;
+      line-height: 1.15
+    }
+
+    .dcard p {
+      color: var(--concreto);
+      font-size: 14.5px
+    }
+
+    /* ---------- CONFECÇÃO (split) ---------- */
+    .split {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 54px;
+      align-items: center
+    }
+
+    .vidframe {
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      background: var(--verdeFloresta);
+      box-shadow: 0 26px 60px rgba(5, 48, 21, .22)
+    }
+
+    .vidframe video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4/5
+    }
+
+    .vidframe .corner {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: var(--lima);
+      color: var(--preto);
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 7px 13px;
+      border-radius: 999px;
+      z-index: 2
+    }
+
+    .conf-copy h2 {
+      font-family: 'Archivo Expanded', 'Archivo';
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: clamp(24px, 3.2vw, 41.6px);
+      line-height: .96
+    }
+
+    .conf-copy h2 .g {
+      color: var(--verde2r)
+    }
+
+    .conf-copy p {
+      color: var(--concreto);
+      font-size: 16.5px;
+      margin-top: 18px;
+      max-width: 480px
+    }
+
+    .capgrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 32px
+    }
+
+    .capcell {
+      background: var(--branco);
+      border: 1px solid var(--linha);
+      border-radius: 16px;
+      padding: 20px 18px
+    }
+
+    .capcell .n {
+      font-family: 'Archivo Expanded', 'Archivo';
+      font-weight: 900;
+      font-size: 30px;
+      color: var(--verde2r);
+      line-height: 1
+    }
+
+    .capcell .l {
+      font-size: 12.5px;
+      color: var(--concreto);
+      margin-top: 8px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 600
+    }
+
+    /* ---------- PRODUTOS GALLERY ---------- */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 200px;
+      gap: 16px
+    }
+
+    .tile {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--verdeFloresta);
+      cursor: pointer
+    }
+
+    .tile img,
+    .tile video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s ease
+    }
+
+    .tile:hover img,
+    .tile:hover video {
+      transform: scale(1.07)
+    }
+
+    .tile .label {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 46px 20px 18px;
+      z-index: 2;
+      background: linear-gradient(180deg, transparent, rgba(5, 48, 21, .88));
+      color: var(--branco);
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: .01em;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 10px
+    }
+
+    .tile .label small {
+      font-weight: 500;
+      font-size: 12px;
+      color: #c8d0c8;
+      text-transform: uppercase;
+      letter-spacing: .08em
+    }
+
+    .tile .tagv {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      background: rgba(11, 11, 11, .6);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 10.5px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 999px
+    }
+
+    /* spans */
+    .t-a {
+      grid-column: span 5;
+      grid-row: span 2
+    }
+
+    .t-b {
+      grid-column: span 4;
+      grid-row: span 2
+    }
+
+    .t-c {
+      grid-column: span 3;
+      grid-row: span 2
+    }
+
+    .t-d {
+      grid-column: span 4
+    }
+
+    .t-e {
+      grid-column: span 4
+    }
+
+    .t-f {
+      grid-column: span 4
+    }
+
+    .t-g {
+      grid-column: span 7;
+      grid-row: span 2
+    }
+
+    .t-h {
+      grid-column: span 5;
+      grid-row: span 2
+    }
+
+    /* ---------- APLICAÇÕES ---------- */
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px
+    }
+
+    .app {
+      background: transparent;
+      border-radius: 20px;
+      min-height: 300px;
+      perspective: 1300px;
+      transition: transform .3s
+    }
+
+    .app:hover {
+      transform: translateY(-6px)
+    }
+
+    .app-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      transition: transform .85s cubic-bezier(.2, .7, .2, 1);
+      transform-style: preserve-3d
+    }
+
+    .app:hover .app-inner {
+      transform: rotateY(180deg)
+    }
+
+    .app-face {
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px 24px
+    }
+
+    .app-front {
+      background: var(--verdeFloresta);
+      color: var(--branco)
+    }
+
+    .app:nth-child(2) .app-front {
+      background: var(--verde2r)
+    }
+
+    .app-front .ic {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(198, 242, 78, .16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .3s
+    }
+
+    .app-front .ic svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--lima)
+    }
+
+    .app-front h3 {
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 21px;
+      margin-bottom: 6px
+    }
+
+    .app-front p {
+      color: #e6ece6;
+      font-size: 13.5px
+    }
+
+    .app-back {
+      transform: rotateY(180deg);
+      background-size: cover;
+      background-position: center;
+      justify-content: flex-end;
+      box-shadow: 0 20px 44px rgba(5, 48, 21, .30)
+    }
+
+    .app-back::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(5, 48, 21, .08) 35%, rgba(5, 48, 21, .82) 100%)
+    }
+
+    .app-back .tagback {
+      position: relative;
+      z-index: 2;
+      align-self: flex-start;
+      background: var(--lima);
+      color: var(--preto);
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 10.5px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 5px 11px;
+      border-radius: 999px
+    }
+
+    .app-back h3 {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 22px
+    }
+
+    /* ---------- SEGMENTOS ---------- */
+    .segs {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      border: 1px solid var(--linha);
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--branco)
+    }
+
+    .seg {
+      padding: 32px 24px;
+      border-right: 1px solid var(--linha);
+      transition: .3s
+    }
+
+    .seg:last-child {
+      border-right: none
+    }
+
+    .seg:hover {
+      background: var(--verdeFloresta);
+      color: var(--branco)
+    }
+
+    .seg .k {
+      font-family: 'Archivo Expanded', 'Archivo';
+      font-weight: 900;
+      font-size: 14px;
+      color: var(--verde2r)
+    }
+
+    .seg:hover .k {
+      color: var(--lima)
+    }
+
+    .seg h3 {
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 20px;
+      margin: 14px 0 10px
+    }
+
+    .seg p {
+      font-size: 13.5px;
+      color: var(--concreto)
+    }
+
+    .seg:hover p {
+      color: #cfd6cf
+    }
+
+    /* ---------- PROVA SOCIAL ---------- */
+    .clients {
+      background: var(--preto);
+      color: var(--branco);
+      border-radius: 28px;
+      padding: 64px 48px;
+      text-align: center
+    }
+
+    .clients .eyebrow {
+      color: var(--lima)
+    }
+
+    .clients h2 {
+      font-family: 'Archivo Expanded', 'Archivo';
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: clamp(20.8px, 2.88vw, 36.8px);
+      line-height: 1;
+      margin: 14px auto 10px;
+      max-width: 18ch
+    }
+
+    .clients p {
+      color: #a9b2a9;
+      max-width: 540px;
+      margin: 0 auto 40px
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center
+    }
+
+    .chips span {
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 999px;
+      padding: 11px 22px;
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: .02em;
+      transition: .25s
+    }
+
+    .chips span:hover {
+      background: var(--lima);
+      color: var(--preto);
+      border-color: var(--lima)
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .cta {
+      position: relative;
+      background: var(--verde2r);
+      border-radius: 28px;
+      overflow: hidden;
+      padding: 72px 56px;
+      color: var(--branco)
+    }
+
+    .cta .ring {
+      position: absolute;
+      right: -120px;
+      bottom: -160px;
+      width: 380px;
+      height: 380px;
+      border: 50px solid rgba(255, 255, 255, .16);
+      border-radius: 50%
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .cta h2 {
+      font-family: 'Archivo Expanded', 'Archivo';
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: clamp(24px, 3.68vw, 46.4px);
+      line-height: .96;
+      max-width: 14ch
+    }
+
+    .cta p {
+      color: #dff0e4;
+      margin-top: 16px;
+      max-width: 420px;
+      font-size: 16.5px
+    }
+
+    .cta .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 260px
+    }
+
+    .cta-btn {
+      background: var(--lima);
+      color: var(--preto);
+      padding: 18px 26px;
+      border-radius: 16px;
+      font-family: 'Archivo';
+      font-weight: 700;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      transition: .25s
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, .25)
+    }
+
+    .cta-btn.alt {
+      background: rgba(255, 255, 255, .12);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, .3)
+    }
+
+    .cta-btn svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--verdeFloresta);
+      color: #bcc5bc;
+      padding: 64px 0 38px
+    }
+
+    .foot-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      padding-bottom: 42px;
+      border-bottom: 1px solid rgba(255, 255, 255, .12)
+    }
+
+    .foot-logo img {
+      height: 46px;
+      filter: brightness(0) saturate(100%) invert(95%) sepia(8%) saturate(180%) brightness(105%)
+    }
+
+    footer .foot-logo p {
+      margin-top: 16px;
+      max-width: 320px;
+      font-size: 14px;
+      color: #9fa99f
+    }
+
+    .foot-col h4 {
+      font-family: 'Archivo';
+      font-weight: 700;
+      color: var(--branco);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 16px
+    }
+
+    .foot-col a,
+    .foot-col span {
+      display: block;
+      font-size: 14.5px;
+      color: #bcc5bc;
+      margin-bottom: 10px;
+      transition: .2s
+    }
+
+    .foot-col a:hover {
+      color: var(--lima)
+    }
+
+    .foot-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 14px;
+      padding-top: 26px;
+      font-size: 13px;
+      color: #8b958b
+    }
+
+    /* reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: .7s cubic-bezier(.2, .7, .2, 1)
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media(max-width:1000px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .apps {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .segs {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .seg {
+        border-right: 1px solid var(--linha);
+        border-bottom: 1px solid var(--linha)
+      }
+
+      .split {
+        grid-template-columns: 1fr;
+        gap: 36px
+      }
+
+      .gallery {
+        grid-auto-rows: 160px
+      }
+    }
+
+    @media(max-width:720px) {
+      .nav-links {
+        position: fixed;
+        inset: 0 0 0 auto;
+        width: 78%;
+        max-width: 330px;
+        background: var(--verdeFloresta);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 40px;
+        gap: 26px;
+        transform: translateX(100%);
+        transition: .4s;
+        z-index: 60
+      }
+
+      .nav-links.open {
+        transform: none
+      }
+
+      .nav-links a {
+        color: var(--branco) !important;
+        font-size: 20px
+      }
+
+      .burger {
+        display: flex
+      }
+
+      .nav-cta {
+        font-size: 15px;
+        padding: 14px 22px
+      }
+
+      section.block {
+        padding: 68px 0
+      }
+
+      .clients,
+      .cta {
+        padding: 48px 26px
+      }
+
+      .cta-inner {
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px
+      }
+
+      .t-a,
+      .t-b,
+      .t-c,
+      .t-d,
+      .t-e,
+      .t-f,
+      .t-g,
+      .t-h {
+        grid-column: span 2;
+        grid-row: span 1
+      }
+
+      .t-a,
+      .t-g {
+        grid-row: span 2
+      }
+
+      .capgrid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .hero-meta {
+        gap: 18px
+      }
+    }
+
+    @media(max-width:460px) {
+
+      .grid-4,
+      .apps {
+        grid-template-columns: 1fr
+      }
+
+      .segs {
+        grid-template-columns: 1fr
+      }
+
+      .gallery {
+        grid-template-columns: 1fr
+      }
+
+      .t-a,
+      .t-b,
+      .t-c,
+      .t-d,
+      .t-e,
+      .t-f,
+      .t-g,
+      .t-h {
+        grid-column: span 1;
+        grid-row: span 1;
+        min-height: 230px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header id="head">
+    <div class="bar">
+      <a href="#topo" class="nav-logo" aria-label="2R Creative Print">
+        <img src="logo-2r-transparent.svg" alt="2R" class="nav-mark">
+        <img src="logo-escrita-transparent.svg" alt="2R Creative Print" id="wordmark" style="height:22px">
+      </a>
+      <nav class="nav-links" id="menu">
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#confeccao">Confecção</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#aplicacoes">Aplicações</a>
+        <a href="#clientes">Clientes</a>
+        <a href="https://wa.me/5511981575764?text=Ol%C3%A1.+Venho+pelo+site+e+gostaria+de+realizar+um+projeto."
+          target="_blank" rel="noopener" class="nav-cta">Pedir orçamento</a>
+      </nav>
+      <div class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="topo">
+    <video autoplay muted loop playsinline poster="midias-convertidas/Equipe%20de%20eventos.webp">
+      <source src="midias-convertidas/Flow_202606181403.webm" type="video/webm">
+    </video>
+    <div class="veil"></div>
+    <div class="ring"></div>
+    <div class="hero-inner">
+      <div class="wrap">
+        <span class="pill pill-tag">Confecção &amp; Estamparia · São Paulo</span>
+        <h1 class="display">Transformamos ideias e sonhos em <span class="g">produtos prontos</span></h1>
+        <p class="sub">Confecção e estamparia personalizada para marcas, empresas, eventos, times e escolas. Da peça
+          única à produção em escala, com acabamento profissional e atendimento próximo.</p>
+        <div class="hero-cta">
+          <a href="https://wa.me/5511981575764?text=Ol%C3%A1.+Venho+pelo+site+e+gostaria+de+realizar+um+projeto."
+            target="_blank" rel="noopener" class="btn-primary">Pedir orçamento</a>
+          <a href="#produtos" class="btn-ghost">Ver produtos</a>
+        </div>
+        <div class="hero-meta">
+          <span><b>3.000</b> peças/dia</span>
+          <span><b>1</b> peça mínima (DTF)</span>
+          <span><b>4</b> aplicações sob o mesmo teto</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee">
+    <div class="track">
+      <div>
+        <span>Camisetas</span><i>◆</i><span>Oversized</span><i>◆</i><span>Polo</span><i>◆</i><span>Moletom</span><i>◆</i><span>Bonés</span><i>◆</i><span>Ecobags</span><i>◆</i><span>Uniformes</span><i>◆</i><span>Streetwear</span><i>◆</i>
+      </div>
+      <div aria-hidden="true">
+        <span>Camisetas</span><i>◆</i><span>Oversized</span><i>◆</i><span>Polo</span><i>◆</i><span>Moletom</span><i>◆</i><span>Bonés</span><i>◆</i><span>Ecobags</span><i>◆</i><span>Uniformes</span><i>◆</i><span>Streetwear</span><i>◆</i>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== DIFERENCIAIS ===================== -->
+  <section class="block" id="diferenciais">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Por que a 2R</span>
+        <h2>Qualidade de marca. Estrutura de fábrica. Atendimento de parceiro.</h2>
+        <p>Confecção, estamparia, acabamento e atendimento reunidos em um processo pensado para entregar peças
+          personalizadas com padrão profissional.</p>
+      </div>
+      <div class="grid-4">
+        <div class="dcard reveal">
+          <div class="dnum">01</div>
+          <div>
+            <h3>Atendimento de parceiro</h3>
+            <p>Acompanhamento próximo e consultivo do primeiro contato à entrega.</p>
+          </div>
+        </div>
+        <div class="dcard reveal">
+          <div class="dnum">02</div>
+          <div>
+            <h3>Padrão acima da média</h3>
+            <p>Cada peça passa por escolhas de tecido, aplicação e finalização para entregar um resultado à altura da
+              sua empresa, coleção ou evento.</p>
+          </div>
+        </div>
+        <div class="dcard reveal">
+          <div class="dnum">03</div>
+          <div>
+            <h3>Qualquer escala</h3>
+            <p>De 1 peça a grandes lotes, você conta com uma estrutura preparada para produzir conforme a sua fase e
+              necessidade.</p>
+          </div>
+        </div>
+        <div class="dcard reveal">
+          <div class="dnum">04</div>
+          <div>
+            <h3>Qualidade e eficiência</h3>
+            <p>Indicamos a melhor técnica conforme quantidade, arte e objetivo, para seu orçamento fazer sentido sem
+              abrir mão da qualidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONFECÇÃO ===================== -->
+  <section class="block" id="confeccao"
+    style="background:var(--branco);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)">
+    <div class="wrap split">
+      <div class="vidframe reveal">
+        <span class="corner">Dentro da fábrica</span>
+        <video autoplay muted loop playsinline>
+          <source src="midias-convertidas/video%20de%20confec%C3%A7%C3%A3o.webm" type="video/webm">
+        </video>
+      </div>
+      <div class="conf-copy reveal">
+        <span class="eyebrow">Confecção completa</span>
+        <h2 style="margin-top:14px">Sua peça<br>nasce <span class="g">aqui.</span></h2>
+        <p>Da escolha do tecido à aplicação final, a 2R produz peças personalizadas com estrutura própria, acabamento
+          profissional e capacidade para atender desde marcas em lançamento até grandes demandas corporativas.</p>
+        <div class="capgrid">
+          <div class="capcell">
+            <div class="n">~30</div>
+            <div class="l">dias de prazo médio</div>
+          </div>
+          <div class="capcell">
+            <div class="n">500</div>
+            <div class="l">peças por mesa</div>
+          </div>
+          <div class="capcell">
+            <div class="n">3.000</div>
+            <div class="l">peças/dia no pico</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUTOS ===================== -->
+  <section class="block" id="produtos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Portfólio</span>
+        <h2>Produtos personalizados para cada tipo de projeto.</h2>
+        <p>Camisetas, oversized, polos, moletons, bonés, ecobags e outras peças feitas para representar sua empresa,
+          marca, evento, time ou escola com qualidade.</p>
+      </div>
+      <div class="gallery">
+        <div class="tile t-a reveal">
+          <span class="tagv">Marca própria</span>
+          <video autoplay muted loop playsinline>
+            <source src="midias-convertidas/marca%20propria.webm" type="video/webm">
+          </video>
+          <div class="label">Marca própria <small>Coleção</small></div>
+        </div>
+        <div class="tile t-b reveal">
+          <span class="tagv">Estampa</span>
+          <video autoplay muted loop playsinline>
+            <source src="midias-convertidas/estampa%20metal.webm" type="video/webm">
+          </video>
+          <div class="label">Estampa metalizada <small>DTF</small></div>
+        </div>
+        <div class="tile t-c reveal">
+          <img src="midias-convertidas/ecobag.webp" alt="Ecobag personalizada" loading="lazy">
+          <div class="label">Ecobag <small>Brinde</small></div>
+        </div>
+        <div class="tile t-d reveal">
+          <img src="midias-convertidas/blusa%20com%20ziper%20estampa%20basica%201%20.webp" alt="Blusa com zíper"
+            loading="lazy">
+          <div class="label">Blusa com zíper <small>Confecção</small></div>
+        </div>
+        <div class="tile t-e reveal">
+          <img src="midias-convertidas/marca%202.webp" alt="Peça de marca" loading="lazy">
+          <div class="label">Streetwear <small>Marca</small></div>
+        </div>
+        <div class="tile t-f reveal">
+          <img src="midias-convertidas/WhatsApp%20Image%202026-06-05%20at%2015.06.47.webp" alt="Peça personalizada"
+            loading="lazy">
+          <div class="label">Personalizado <small>Silk</small></div>
+        </div>
+        <div class="tile t-g reveal">
+          <span class="tagv">Evento</span>
+          <img src="midias-convertidas/Equipe%20de%20eventos.webp" alt="Equipe de eventos uniformizada" loading="lazy">
+          <div class="label">Uniforme de equipe <small>Evento</small></div>
+        </div>
+        <div class="tile t-h reveal">
+          <span class="tagv">Detalhe</span>
+          <video autoplay muted loop playsinline>
+            <source src="midias-convertidas/blusa%20com%20ziper%20estampa%20basica%202.webm" type="video/webm">
+          </video>
+          <div class="label">Acabamento de peça <small>Confecção</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APLICAÇÕES ===================== -->
+  <section class="block" id="aplicacoes" style="background:var(--cru)">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Técnicas</span>
+        <h2>A aplicação certa para cada ideia.</h2>
+        <p>A 2R entende seu produto, sua arte e sua quantidade para indicar a técnica que entrega o melhor resultado.
+        </p>
+      </div>
+      <div class="apps">
+        <div class="app reveal">
+          <div class="app-inner">
+            <div class="app-face app-front">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <path d="M4 7h16M4 12h16M4 17h10" />
+                </svg></div>
+              <div class="app-txt">
+                <h3>Silk</h3>
+                <p>Ideal para grandes volumes e artes mais chapadas, com alta durabilidade, ótimo acabamento e excelente
+                  custo-benefício para produções em escala.</p>
+              </div>
+            </div>
+            <div class="app-face app-back" style="background-image:url('midias-convertidas/silk.webp')">
+              <span class="tagback">Técnica</span>
+              <h3>Silk</h3>
+            </div>
+          </div>
+        </div>
+        <div class="app reveal">
+          <div class="app-inner">
+            <div class="app-face app-front">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M12 8v8M8 12h8" />
+                </svg></div>
+              <div class="app-txt">
+                <h3>DTF</h3>
+                <p>Perfeito para peças com muitas cores, detalhes, sombras e degradês. Uma solução versátil para pequenas
+                  quantidades, testes, peças piloto e personalizações sem mínimo alto.</p>
+              </div>
+            </div>
+            <div class="app-face app-back" style="background-image:url('midias-convertidas/dtf.webp')">
+              <span class="tagback">Técnica</span>
+              <h3>DTF</h3>
+            </div>
+          </div>
+        </div>
+        <div class="app reveal">
+          <div class="app-inner">
+            <div class="app-face app-front">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <path d="M5 5h14v14H5z" />
+                  <path d="M9 9h6v6H9z" />
+                </svg></div>
+              <div class="app-txt">
+                <h3>Sublimação</h3>
+                <p>Ideal para peças com cores vivas e artes grandes. Uma técnica leve e durável, perfeita para uniformes
+                  esportivos, eventos, escolas e projetos que precisam de alta definição visual.</p>
+              </div>
+            </div>
+            <div class="app-face app-back" style="background-image:url('midias-convertidas/sublima%C3%A7%C3%A3o.webp')">
+              <span class="tagback">Técnica</span>
+              <h3>Sublimação</h3>
+            </div>
+          </div>
+        </div>
+        <div class="app reveal">
+          <div class="app-inner">
+            <div class="app-face app-front">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <path d="M12 3v18M3 12h18" stroke-linecap="round" />
+                  <circle cx="12" cy="12" r="4" />
+                </svg></div>
+              <div class="app-txt">
+                <h3>Bordado</h3>
+                <p>Acabamento premium para quem busca sofisticação, textura e durabilidade. Ideal para polos, bonés,
+                  uniformes corporativos e peças que precisam transmitir mais valor.</p>
+              </div>
+            </div>
+            <div class="app-face app-back" style="background-image:url('midias-convertidas/bordado.webp')">
+              <span class="tagback">Técnica</span>
+              <h3>Bordado</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SEGMENTOS ===================== -->
+  <section class="block" id="segmentos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Para quem produzimos</span>
+        <h2>Produção personalizada para diferentes realidades.</h2>
+        <p>Atendemos empresas, marcas, eventos, ações promocionais e escolas com peças personalizadas para vestir
+          identidade, equipe e propósito.</p>
+      </div>
+      <div class="segs reveal">
+        <div class="seg">
+          <div class="k">01</div>
+          <h3>Empresas</h3>
+          <p>Uniformes, brindes e peças corporativas feitas para representar sua empresa com mais qualidade, organização
+            e presença.</p>
+        </div>
+        <div class="seg">
+          <div class="k">02</div>
+          <h3>Marcas</h3>
+          <p>Produção para moda, streetwear e lifestyle com acabamento consistente, modelagem sob demanda e padrão entre
+            coleções.</p>
+        </div>
+        <div class="seg">
+          <div class="k">03</div>
+          <h3>Eventos</h3>
+          <p>Peças personalizadas para equipes, participantes e ativações, com estrutura para atender volume, prazo e
+            identidade visual.</p>
+        </div>
+        <div class="seg">
+          <div class="k">04</div>
+          <h3>Promocionais</h3>
+          <p>Brindes e produtos personalizados que fogem do genérico e fazem sua marca ser lembrada com mais valor.</p>
+        </div>
+        <div class="seg">
+          <div class="k">05</div>
+          <h3>Escolas</h3>
+          <p>Uniformes, camisetas de formatura e peças especiais para turmas, eventos escolares e momentos que precisam
+            ficar marcados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLIENTES ===================== -->
+  <section class="block" id="clientes">
+    <div class="wrap">
+      <div class="clients reveal">
+        <span class="eyebrow">Prova social</span>
+        <h2>Marcas que já vestem 2R</h2>
+        <p>Quem exige qualidade já confia na nossa produção. Você está em boa companhia.</p>
+        <div class="chips">
+          <span>Local Surf</span><span>Mental Madness</span><span>Panta Cosméticos</span><span>Campeão Farma</span>
+          <span>Ultra Farma</span><span>Garage Car Tech</span><span>Trinity</span><span>Instituto Energizando Vidas</span>
+          <span>Trperez</span><span>Amine</span><span>Shadow of the Fallen</span><span>99 Food</span>
+          <span>GMS</span><span>Reconexão Tríade</span><span>R10 Motos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA / CONTATO ===================== -->
+  <section class="block" id="contato" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta reveal">
+        <div class="ring"></div>
+        <div class="cta-inner">
+          <div>
+            <span class="pill" style="background:rgba(255,255,255,.15);color:#fff">Atendimento</span>
+            <h2 style="margin-top:18px">Vamos produzir<br>a sua peça?</h2>
+            <p>A 2R atende de forma consultiva para indicar a melhor solução de confecção e estamparia conforme sua
+              arte, volume, prazo e objetivo.</p>
+          </div>
+          <div class="actions">
+            <a href="https://wa.me/5511981575764?text=Ol%C3%A1.+Venho+pelo+site+e+gostaria+de+realizar+um+projeto."
+              target="_blank" rel="noopener" class="cta-btn">
+              Falar no WhatsApp
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.484 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.738-.979a9.85 9.85 0 002.74.272z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com/2rcreativeprint" target="_blank" rel="noopener" class="cta-btn alt">
+              @2rcreativeprint
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.68a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.4-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-logo">
+          <img src="logo-escrita-transparent.svg" alt="2R Creative Print">
+          <p>Confecção e estamparia personalizada em São Paulo. Transformamos ideias em produtos de alta qualidade — da
+            peça única à escala industrial.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Navegação</h4>
+          <a href="#diferenciais">Diferenciais</a>
+          <a href="#confeccao">Confecção</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#aplicacoes">Aplicações</a>
+        </div>
+        <div class="foot-col">
+          <h4>Produtos</h4>
+          <span>Camisetas &amp; Oversized</span>
+          <span>Polo &amp; Manga longa</span>
+          <span>Moletom &amp; Regata</span>
+          <span>Bonés &amp; Ecobags</span>
+        </div>
+        <div class="foot-col">
+          <h4>Contato</h4>
+          <a href="https://instagram.com/2rcreativeprint" target="_blank" rel="noopener">@2rcreativeprint</a>
+          <a href="https://wa.me/5511981575764?text=Ol%C3%A1.+Venho+pelo+site+e+gostaria+de+realizar+um+projeto."
+            target="_blank" rel="noopener">WhatsApp</a>
+          <span>São Paulo · SP</span>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 2R Creative Print. Todos os direitos reservados.</span>
+        <span>Qualidade de marca · Escala de fábrica · Atendimento de parceiro</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // nav scroll state
+    const head = document.getElementById('head');
+    const onScroll = () => head.classList.toggle('scrolled', window.scrollY > 40);
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+    // mobile menu
+    const burger = document.getElementById('burger'), menu = document.getElementById('menu');
+    burger.addEventListener('click', () => menu.classList.toggle('open'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+    // reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: .14 });
+    document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4 * 60) + 'ms'; io.observe(el); });
+  </script>
+</body>
+
+</html>
